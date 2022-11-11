@@ -1,0 +1,13 @@
+@import 'variables';
+
+
+@mixin celulares_grandes{
+    @media(min-width:#{$celulares_grandes}){
+        @content;
+    }
+}
+@mixin desktop{
+    @media(min-width:#{$desktop}){
+        @content;
+    }
+}

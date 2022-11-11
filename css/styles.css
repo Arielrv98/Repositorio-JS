@@ -1,0 +1,697 @@
+@charset "UTF-8";
+/* ---- MOBILE FIRST ----*/
+/* ---- INDEX Y GENERAL ----*/
+* {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none; }
+
+a {
+  text-decoration: none; }
+
+.background_juegos, .background_peliculas, .background_registro, .background_login, .background_index {
+  background-image: url(../img/background_juegos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 41%; }
+
+.background_peliculas {
+  background-image: url(../img/ring_back.jpg); }
+
+.background_registro {
+  background-image: url(../img/registro_back.jpg);
+  background-size: auto;
+  background-position: 18%; }
+
+.background_login {
+  background-image: url(../img/login_back.jpg);
+  background-size: auto;
+  background-position: 71.3%; }
+
+.background_index {
+  background-image: url(../img/halloween_background.jpg);
+  position: 40%; }
+
+.pagination {
+  border: 0.2em solid #430714;
+  border-radius: 0.3em; }
+
+.page_color {
+  color: black;
+  transition: 0.5s ease; }
+
+.page_color:hover {
+  color: #ffffff;
+  background-color: black;
+  transition: 0.5s ease; }
+
+.background_dropdown:hover {
+  background-color: black; }
+
+/* ---- GRID ----*/
+.gridcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px auto auto 80px;
+  grid-row-gap: 1em;
+  grid-template-areas: "nav"
+ "buscador"
+ "destacado"
+ "footer"; }
+  @media (min-width: 420px) {
+    .gridcontainer {
+      grid-template-rows: 200px 22px 40px auto 80px;
+      grid-row-gap: 2em;
+      grid-template-areas: "nav"
+ "nav"
+ "buscador"
+ "destacado"
+ "footer"; } }
+  @media (min-width: 992px) {
+    .gridcontainer {
+      grid-template-rows: 130px 130px auto 80px;
+      grid-template-areas: "nav"
+ "buscador"
+ "destacado"
+ "footer"; } }
+
+/* ---- BUSCADOR ----*/
+.buscador {
+  grid-area: buscador; }
+  .buscador .search_color {
+    color: #ffffff;
+    background-color: #430714;
+    transition: 0.8s ease; }
+    .buscador .search_color:hover {
+      color: #430714;
+      background-color: #ffffff;
+      transition: 0.8s ease; }
+  .buscador .search_imput:focus {
+    border-color: #6f0a20;
+    box-shadow: 0 0 0 0.25rem #43071424; }
+
+/* ---- FIN BUSCADOR ----*/
+/* ---- NAV ----*/
+nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column; }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+  nav nav img {
+    max-width: 45%;
+    margin: 0 0 0 1em; }
+
+.contenedor_de_ul {
+  background: black;
+  z-index: 2;
+  margin-top: -4em;
+  margin: 0 -0.75em 0 -0.75em;
+  padding-bottom: 0.2em; }
+
+.navegacion_principal {
+  background: black;
+  width: 100%; }
+  .navegacion_principal ul li {
+    display: block; }
+    .navegacion_principal ul li a {
+      color: #6f0a20;
+      font-size: 1.2em;
+      padding-left: 1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: 1s ease; }
+      .navegacion_principal ul li a:hover {
+        color: #ffffff;
+        transition: 1s ease; }
+
+/* ---- HAMBURGUESA ----*/
+.navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: .5s ease-in-out;
+  margin-right: 1em; }
+  .navbar-toggler span {
+    margin: 0;
+    padding: 0; }
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0; }
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #6f0a20;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out; }
+
+.middle-bar {
+  margin-top: 0px; }
+
+.navbar-toggler .top-bar {
+  margin-top: 0px;
+  transform: rotate(135deg); }
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+.navbar-toggler .bottom-bar {
+  margin-top: 0px;
+  transform: rotate(-135deg); }
+
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -20px;
+  transform: rotate(0deg); }
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+.navbar-toggler.collapsed .bottom-bar {
+  margin-top: 20px;
+  transform: rotate(0deg); }
+
+/* ---- FIN HAMBURGUESA ----*/
+/* ---- FIN NAV ----*/
+/* ---- MAIN ----*/
+section {
+  grid-area: destacado;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+
+.index_section {
+  margin: 2em 0.5em 2em 0.5em; }
+  .index_section h2 {
+    font-size: 2.2em;
+    margin: 0 0 1em 0;
+    color: #ffffff;
+    font-family: 'Abel', sans-serif; }
+  .index_section h3 {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 2em 0 1em 0;
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+    background: rgba(0, 0, 0, 0.781);
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 0.4em;
+    border: 0.1em solid #430714; }
+  .index_section .article_principal, .index_section .article_destacado {
+    background: rgba(0, 0, 0, 0.781);
+    border-radius: 0.8em;
+    padding: 1em 1em 1em 1em; }
+    .index_section .article_principal p, .index_section .article_destacado p {
+      margin: 1em 1em 1em 1em; }
+  .index_section .article_destacado {
+    margin: 0 0 3em 0;
+    border: 0.3em solid #430714; }
+    .index_section .article_destacado img {
+      padding: 0.1em 0 0 0; }
+    .index_section .article_destacado h5 {
+      font-size: 2em;
+      color: #ffffff;
+      padding: 0 0 1em 0;
+      font-family: 'Abel', sans-serif; }
+  .index_section article {
+    padding: 0 0 6em 0; }
+    .index_section article h4 {
+      font-size: 2em;
+      color: #ffffff;
+      padding: 0 0 1em 0;
+      font-family: 'Abel', sans-serif; }
+    .index_section article p {
+      font-size: 1.5em;
+      color: #ffffff;
+      padding: 0.7em 0 0.5em 0;
+      font-family: 'Abel', sans-serif;
+      font-weight: 600; }
+    .index_section article a {
+      font-size: 1.2em;
+      color: #ffffff;
+      background: #430714;
+      padding: 0.5em 0.5em 0.5em 0.5em;
+      border-radius: 0.3em;
+      transition: 1s ease; }
+      .index_section article a:hover {
+        color: #87162e;
+        background: #ffffff;
+        transition: 1s ease; }
+
+.numero_de_pag ul {
+  display: flex; }
+  .numero_de_pag ul li a {
+    font-size: 1.3em;
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 0.8em; }
+
+/* ---- FIN MAIN ----*/
+/* ---- FOOTER ----*/
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0 0 0;
+  color: #ffffff;
+  background-color: black;
+  width: 100%;
+  height: 9.2em; }
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -2.5em; }
+    footer ul li {
+      margin-bottom: 0.5em; }
+      footer ul li a img {
+        transition: 0.6s; }
+        footer ul li a img:hover {
+          transform: scale(1.2); }
+  footer h4 {
+    font-size: 1.8em;
+    color: #6f0a20;
+    text-align: center;
+    margin: 0.3em 1em; }
+  footer div {
+    background-color: black; }
+
+/* ---- FIN FOOTER ----*/
+/* ---- VIDEOJUEGOS Y PELÍCULAS ----*/
+/* ---- MAIN ----*/
+.seccion_general {
+  margin: 4em 0.5em 2em 0.5em; }
+  .seccion_general h2 {
+    font-size: 2.2em;
+    margin: 0 0 1em 0;
+    color: #ffffff;
+    font-family: 'Abel', sans-serif; }
+  .seccion_general h3 {
+    padding: 0 0 1.5em 0;
+    margin: 0 2em 0 2em;
+    font-size: 2em;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif; }
+  .seccion_general article {
+    padding: 0 0 6em 0; }
+    .seccion_general article h4 {
+      font-size: 2em;
+      color: #ffffff;
+      padding: 0 0 1em 0;
+      font-family: 'Abel', sans-serif; }
+    .seccion_general article p {
+      font-size: 1.5em;
+      color: #ffffff;
+      padding: 0.7em 0 0.5em 0;
+      font-family: 'Abel', sans-serif;
+      font-weight: 600; }
+    .seccion_general article a {
+      font-size: 1.2em;
+      color: #87162e;
+      transition: 0.6s ease; }
+      .seccion_general article a:hover {
+        color: #ffffff;
+        transition: 0.6s ease; }
+    .seccion_general article .ver_mas {
+      color: #ffffff;
+      background: #430714;
+      padding: 0.5em 0.5em 0.5em 0.5em;
+      border-radius: 0.3em;
+      transition: 1s ease; }
+      .seccion_general article .ver_mas:hover {
+        color: #87162e;
+        background: #ffffff;
+        transition: 1s ease; }
+    .seccion_general article .ver_mas_destacado {
+      color: #ffffff;
+      background: #430714;
+      padding: 0.5em 0.5em 0.5em 0.5em;
+      border-radius: 0.3em;
+      transition: 1s ease; }
+      .seccion_general article .ver_mas_destacado:hover {
+        color: #87162e;
+        background: #ffffff;
+        transition: 1s ease; }
+  .seccion_general .article_principal_general, .seccion_general .article_reseñas_general {
+    background: rgba(0, 0, 0, 0.781);
+    border-radius: 0.8em;
+    padding: 1em 1em 1em 1em; }
+    .seccion_general .article_principal_general p, .seccion_general .article_reseñas_general p {
+      margin: 1em 1em 1em 1em; }
+  .seccion_general .obra_destacada {
+    background: rgba(0, 0, 0, 0.781);
+    border-radius: 0.4em;
+    border: 0.1em solid #430714;
+    margin-top: 1em;
+    margin-bottom: 1em; }
+    .seccion_general .obra_destacada p {
+      padding: 1em 1.5em 1em 1.5em;
+      font-size: 1.5em; }
+    .seccion_general .obra_destacada h3 {
+      margin: 0 0 0 2em;
+      font-size: 1.6em; }
+  .seccion_general .obras_categorias {
+    background: rgba(0, 0, 0, 0.781);
+    border-radius: 0.4em;
+    border: 0.1em solid #430714;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 1em 1em 1em 0em; }
+    .seccion_general .obras_categorias ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1em 1em 1em 1em; }
+    .seccion_general .obras_categorias a {
+      text-decoration: none;
+      font-size: 1.4em; }
+    .seccion_general .obras_categorias h3 {
+      font-size: 1.6em; }
+  .seccion_general .article_reseñas_general {
+    margin: 0 0 3em 0;
+    border: 0.3em solid #430714; }
+    .seccion_general .article_reseñas_general img {
+      padding: 0.1em 0 0 0; }
+    .seccion_general .article_reseñas_general h5 {
+      font-size: 2em;
+      color: #ffffff;
+      padding: 0 0 1em 0;
+      font-family: 'Abel', sans-serif; }
+
+.titulo_destacado_obra {
+  margin: 2em 4em 0 1.8em; }
+  .titulo_destacado_obra div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 1em; }
+
+.animacion_liston {
+  animation: infinite; }
+
+.carrusel_control {
+  margin: -1em 0 2em 0;
+  padding-left: 2em;
+  padding-right: 2em; }
+
+.imagenes_destacadas {
+  display: none; }
+
+.numero_de_pag ul {
+  display: flex; }
+  .numero_de_pag ul li a {
+    font-size: 1.3em;
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 0.8em; }
+
+/* ---- FIN DE VIDEOJUEGOS Y PELÍCULAS ----*/
+/* ---- REGISTRO Y LOGIN ----*/
+.form_register {
+  width: 322px;
+  background: black;
+  opacity: 95%;
+  padding: 30px;
+  margin: auto;
+  margin-top: 3em;
+  padding: 1em 1em 1em 1em;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px black; }
+  .form_register h4 {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    margin-left: 0.3em; }
+  .form_register p {
+    height: 40px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 40px; }
+  .form_register a {
+    color: #6f0a20;
+    text-decoration: none;
+    transition: 0.6s ease; }
+    .form_register a:hover {
+      color: white;
+      transition: 0.6s ease; }
+  .form_register .volver_inicio a {
+    font-size: 1.2em;
+    color: #ffffff;
+    background: #430714;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 0.3em;
+    transition: 1s ease; }
+    .form_register .volver_inicio a:hover {
+      color: #87162e;
+      background: #ffffff;
+      transition: 1s ease; }
+
+.logo_ryl {
+  margin-left: 0.9em;
+  width: 90%; }
+
+.input_ryl {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #595556;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: black; }
+
+.botons_ryl {
+  width: 100%;
+  background: #6f0a20;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+  transition: 0.6s ease; }
+  .botons_ryl:hover {
+    background: white;
+    color: #6f0a20;
+    transition: 0.6s ease; }
+
+/* ---- FIN DE REGISTRO Y LOGIN ----*/
+/* ---- Escritorio pequeño/ tablet ----*/
+@media screen and (min-width: 992px) {
+  .logo_principal {
+    margin: -4.5em 0 0 0; }
+  .contenedor_de_ul {
+    background: none;
+    justify-content: flex-end;
+    margin: 0 1em 0 0; }
+  .navbar-nav {
+    margin: -3.4em 0 0 0; }
+  /* ---- REGISTRO Y LOGIN ----*/
+  .form_register {
+    width: 400px; }
+    .form_register p {
+      font-size: 18px; }
+  /* ---- FIN REGISTRO Y LOGIN ----*/ }
+
+/* ---- Escritorio Grande ----*/
+@media screen and (min-width: 1200px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+  .logo_principal {
+    margin: 1.5em 0 0 2em; }
+  .navbar-nav {
+    margin: 2.5em 1.8em 0 0; }
+  /* ---- MAIN ----*/
+  .index_section {
+    margin: 2em 44em 2em 2em; }
+    .index_section .article_principal, .index_section .article_destacado {
+      margin: 1em -41em 1em 1em; }
+      .index_section .article_principal p, .index_section .article_destacado p {
+        font-size: 1.7em; }
+    .index_section .article_destacado {
+      padding: 2em 2em 2em 2em; }
+      .index_section .article_destacado p {
+        margin: 1em 15em -0.5em 1em;
+        font-size: 1.7em; }
+      .index_section .article_destacado h5 {
+        margin: 1em 6em -0.6em -8em;
+        font-size: 2.6em;
+        font-weight: 700; }
+    .index_section article {
+      padding: 0 0 6em 0; }
+      .index_section article h4 {
+        padding: 0 0 1em 0;
+        text-align: start;
+        font-weight: 600; }
+      .index_section article p {
+        color: #ffffff;
+        padding: 0.7em 0 0.5em 0;
+        text-align: start; }
+      .index_section article a {
+        margin: 1em -0.1em -0.5em -12em; }
+    .index_section h2 {
+      font-size: 3.7em;
+      color: #ffffff;
+      text-align: start;
+      margin-left: 0.3em; }
+    .index_section h3 {
+      font-size: 2.4em;
+      color: #ffffff;
+      margin: 2em -40em 1em -25em;
+      text-transform: uppercase;
+      text-align: start; }
+  .parrafo_principal {
+    text-align: start;
+    margin: 0 -20em 0 0; }
+  .obras_generales {
+    display: flex;
+    align-items: flex-end; }
+    .obras_generales p {
+      margin: 0 0 0 1.5em; }
+    .obras_generales a {
+      margin: 0 -18em 0 0;
+      padding-left: 1em; }
+  .pagination {
+    margin: 4em -40em 1em 18em; }
+  /* ---- FOOTER ----*/
+  footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    height: 8.9em;
+    width: 100%; }
+    footer ul {
+      margin: -3em 0 0 66em;
+      padding: 0 0 0 0; }
+      footer ul li {
+        display: inline;
+        padding: 0 4em 0 0; }
+    footer h4 {
+      font-size: 2em;
+      color: #6f0a20;
+      margin: 1.5em 0 0 -29em; }
+  /* ---- VIDEOJUEGOS Y PELÍCULAS ----*/
+  .navegacion_principal {
+    height: 10em; }
+  .seccion_general {
+    margin: 2em 44em 2em 2em; }
+    .seccion_general h2 {
+      font-size: 3.7em;
+      color: #ffffff;
+      text-align: start;
+      margin-left: 0.3em; }
+    .seccion_general h3 {
+      font-size: 1.9em;
+      color: #ffffff;
+      padding: 0 0 1.5em 0;
+      text-transform: uppercase;
+      text-align: start; }
+    .seccion_general article {
+      padding: 0 0 3em 0; }
+      .seccion_general article h4 {
+        padding: 0 0 1em 0;
+        text-align: start;
+        font-weight: 600; }
+      .seccion_general article p {
+        color: #ffffff;
+        padding: 0.7em 0 0.5em 0;
+        text-align: start; }
+      .seccion_general article .ver_mas {
+        margin: 1em 0.5em -0.4em -12em; }
+    .seccion_general .article_principal_general, .seccion_general .article_reseñas_general {
+      margin: 1em -41em 1em 1em;
+      padding: 2em 1em 2em 1em; }
+      .seccion_general .article_principal_general h2, .seccion_general .article_reseñas_general h2 {
+        margin-left: 0.2em; }
+      .seccion_general .article_principal_general p, .seccion_general .article_reseñas_general p {
+        font-size: 1.7em;
+        margin-left: 0.5em; }
+    .seccion_general .article_reseñas_general p {
+      margin: 1em 15em -0.9em 1em;
+      font-size: 1.7em; }
+    .seccion_general .article_reseñas_general img {
+      padding-left: 1em; }
+    .seccion_general .article_reseñas_general h4 {
+      margin-left: 0.5em;
+      margin-bottom: 0.5em; }
+    .seccion_general .article_reseñas_general h5 {
+      padding: 0 0 1em 0;
+      font-family: 'Abel', sans-serif;
+      font-weight: 700;
+      margin: 1em 6em -0.6em -8em;
+      font-size: 2.6em; }
+    .seccion_general .obra_destacada {
+      margin: 0 -41em 0 1em; }
+      .seccion_general .obra_destacada .titulo_destacado_obra {
+        margin: 1em 1em -1em -2.1em; }
+        .seccion_general .obra_destacada .titulo_destacado_obra img {
+          margin: 2em 1em 1em 1em; }
+      .seccion_general .obra_destacada h3 {
+        font-size: 2em;
+        padding: 1em 0 0 0; }
+      .seccion_general .obra_destacada p {
+        padding: 1em 3em 1em 1em;
+        font-size: 1.7em; }
+    .seccion_general .ver_mas_destacado {
+      margin: 0 0 0 61em; }
+    .seccion_general .obras_categorias {
+      padding: 1em 1em 1em 0.3em;
+      margin: 4.5em -50em 1.8em -8em; }
+      .seccion_general .obras_categorias h3 {
+        margin-left: 11.8em;
+        font-size: 2.6em; }
+      .seccion_general .obras_categorias h4 {
+        margin-left: 15.1em;
+        font-size: 2.4em; }
+      .seccion_general .obras_categorias ul {
+        padding: 1em 1em 1em 1em; }
+        .seccion_general .obras_categorias ul a {
+          font-size: 1.9em; }
+    .seccion_general .categorias_peliculas h3 {
+      margin-left: 10.4em; }
+    .seccion_general .categorias_peliculas h4 {
+      margin-left: 13.6em; }
+  .parrafo_principal_general {
+    text-align: start; }
+  .obra_destacada {
+    margin: 0 2em 0 2em; }
+  .titulo_destacado_obra div {
+    justify-content: flex-start; }
+  .carrusel_control {
+    display: none; }
+  .imagenes_destacadas {
+    display: flex;
+    flex-direction: row;
+    max-width: 44.7%;
+    margin: 0 1em 0 2em;
+    justify-content: flex-start;
+    padding: 0 0 0 0; }
+    .imagenes_destacadas img {
+      width: 105%;
+      padding-bottom: 0.5em; }
+  .imagenes_destacadas_2 {
+    margin-left: 1em; }
+  /* ---- FIN DE VIDEOJUEGOS Y PELÍCULAS ----*/ }
