@@ -15,7 +15,7 @@ const productos = [
     {id: 3, nombre: "Cuadro de El Exorcista", precio: 2200, img: "../img/exorcista_3.jpg", cantidad: 1},
     {id: 4, nombre: "Cuadro de Alien", precio: 2200, img: "../img/alien.jpg", cantidad: 1},
     {id: 5, nombre: "Cuadro de Silent Hill 2", precio: 2200, img: "../img/sillent_hill_2.jpg", cantidad: 1},
-    {id: 6, nombre: "Cuadro de Fatal Frame 2", precio: 2200, img: "../img/Fatal_frame_2.jpg", cantidad: 1},
+    {id: 6, nombre: "Cuadro de Fatal Frame 2", precio: 2200, img: "../img/fatal_frame_2.jpg", cantidad: 1},
     {id: 7, nombre: "Cuadro de Saw 1", precio: 2200, img: "../img/saw_1.jpg", cantidad: 1},
     {id: 8, nombre: "Cuadro de The Quarry", precio: 2200, img: "../img/the_quarry.jpg", cantidad: 1},
     {id: 9, nombre: "Cuadro de Among The Sleep", precio: 2200, img: "../img/among_the_sleep.jpg", cantidad: 1},
